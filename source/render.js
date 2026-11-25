@@ -31,7 +31,7 @@ jobs.push({ file: 'app/uchi-office-app-icon-1024.png', html: svg(1024, `<rect wi
 
 // 3. Persona avatars: hanko-style seals, one colour per department, initial in Zen Old Mincho.
 const personas = [
-  ['nora', 'N', C.shu, 'Leadership'], ['ollie', 'O', C.matcha, 'Product'], ['mara', 'M', C.matcha, 'Product'],
+  ['nora', 'N', C.shu, 'Leadership'], ['hana', 'H', C.shu, 'Leadership'], ['ollie', 'O', C.matcha, 'Product'], ['mara', 'M', C.matcha, 'Product'],
   ['iris', 'I', C.matcha, 'Product'], ['ada', 'A', C.matcha, 'Product'], ['theo', 'T', C.ai, 'Engineering'],
   ['bea', 'B', C.ai, 'Engineering'], ['kai', 'K', C.ai, 'Engineering'], ['quinn', 'Q', C.ai, 'Engineering'],
   ['dex', 'D', C.sumi, 'Ops and security'], ['sol', 'S', C.sumi, 'Ops and security'], ['wren', 'W', C.kogecha, 'Docs and support'],
@@ -44,6 +44,8 @@ const f = `fill="${C.washi}"`;
 const icons = {
   // CEO: compass, sets direction
   nora: () => `<circle cx="256" cy="256" r="130" ${s()}/><polygon points="256,146 292,256 220,256" ${f}/><polygon points="220,256 292,256 256,366" ${s(14)}/>`,
+  // Delivery manager: hourglass, time and flow
+  hana: () => `<line x1="150" y1="120" x2="362" y2="120" ${s(24)}/><line x1="150" y1="392" x2="362" y2="392" ${s(24)}/><path d="M178 120 V160 C178 210 226 236 256 256 C286 236 334 210 334 160 V120" ${s(22)}/><path d="M178 392 V352 C178 302 226 276 256 256 C286 276 334 302 334 352 V392" ${s(22)}/><path d="M206 392 C206 356 234 336 256 330 C278 336 306 356 306 392 Z" ${f}/><path d="M222 176 H290 C284 196 270 208 256 216 C242 208 228 196 222 176 Z" ${f}/>`,
   // Product owner: target, who is this for
   ollie: () => `<circle cx="256" cy="256" r="130" ${s()}/><circle cx="256" cy="256" r="76" ${s()}/><circle cx="256" cy="256" r="24" ${f}/>`,
   // Market analyst: rising bars
